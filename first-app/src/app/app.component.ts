@@ -12,6 +12,9 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
     <br/>
     <br/>
     <button (click)="destruirComponente()">Destruir componente</button>
+    <br/>
+    <br/>
+    <app-data-binding></app-data-binding>
     <router-outlet></router-outlet>
   `
 })
@@ -19,7 +22,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked{
 
   valor: number = 1
-  destruido: boolean = false
+  destruido: boolean = true
 
   adicionar(): number{
     return this.valor += 1
