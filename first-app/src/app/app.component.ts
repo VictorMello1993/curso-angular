@@ -6,6 +6,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   // styleUrls: ['./app.component.scss'],
 
   template: `
+    <!--
     <app-title *ngIf="!destruido"></app-title>
     {{valor}}
     <button (click)="adicionar()">Adicionar</button>
@@ -15,6 +16,8 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
     <br/>
     <br/>
     <app-data-binding></app-data-binding>
+    -->
+    <app-diretivas-estruturais>
     <router-outlet></router-outlet>
   `
 })

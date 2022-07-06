@@ -1,0 +1,12 @@
+<h1>Diretiva ngIf</h1>
+<p *ngIf="condition; else falseCondition">True</p>
+<ng-template #falseCondition>
+  <p>False</p>
+</ng-template>
+
+<hr>
+
+<p *ngIf="conditionClick">TrueClick</p>
+<p *ngIf="!conditionClick">FalseClick</p>
+<button (click)="exibirOcultarComponentePorClick()">Clicar</button>
+
