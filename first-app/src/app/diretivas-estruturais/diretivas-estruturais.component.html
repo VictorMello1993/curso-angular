@@ -4,9 +4,22 @@
   <p>False</p>
 </ng-template>
 
-<hr>
+<br/>
 
 <p *ngIf="conditionClick">TrueClick</p>
 <p *ngIf="!conditionClick">FalseClick</p>
 <button (click)="exibirOcultarComponentePorClick()">Clicar</button>
+
+<hr>
+
+<h1>Diretiva ngFor</h1>
+<ul>
+  <li *ngFor="let item of list; let i = index; let ehImpar = odd" (click)="onClickEventList(i)">
+    [{{i}}] Nome = {{item.nome}} - idade = {{item.idade}}
+    {{ehImpar}}
+  </li>
+</ul>
+
+<button (click)="onClickAddList()">Adicionar</button>
+
 
