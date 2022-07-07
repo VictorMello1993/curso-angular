@@ -10,6 +10,8 @@ export class DiretivasEstruturaisComponent implements OnInit {
   condition: boolean = true
   conditionClick: boolean = true
 
+  nome: string = 'pedro'
+
   list: Array<{nome: string, idade: number}> = [
     {nome: 'Victor', idade: 28},
     {nome: 'Felipe', idade: 32},

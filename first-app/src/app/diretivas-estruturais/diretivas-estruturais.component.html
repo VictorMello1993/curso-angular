@@ -22,4 +22,21 @@
 
 <button (click)="onClickAddList()">Adicionar</button>
 
+<hr>
+
+<h1>Diretiva ngSwitch</h1>
+<input type="text" [(ngModel)]="nome">
+
+<div [ngSwitch]="nome">
+  <p *ngSwitchCase="'victor'">
+    victor
+  </p>
+  <p *ngSwitchCase="'pedro'">
+    pedro
+  </p>
+  <p *ngSwitchDefault>
+    Nenhum nome encontrado
+  </p>
+</div>
+
 
