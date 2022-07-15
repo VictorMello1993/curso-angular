@@ -1,4 +1,5 @@
-<!-- <p [ngClass]="{'active': valor, 'disabled': !valor}" [ngStyle]="{'color': textColor}">NgClass</p>
+<ng-content select="h3"></ng-content>
+<p [ngClass]="{'active': valor, 'disabled': !valor}" [ngStyle]="{'color': textColor}">NgClass</p>
 <p [ngStyle]="{'height': heightPx, 'background-color': backgroundColor, 'color': textColor}">NgStyle</p>
 
 <hr>
@@ -6,9 +7,9 @@
 <input [(ngModel)]="nome" type="text"/>
 
 <li *ngFor="let item of list">{{item.nome}}</li>
-<button (click)="salvar()">Salvar</button> -->
+<button (click)="salvar()">Salvar</button>
 
-<ng-template ngFor let-item [ngForOf]="list">
+<!-- <ng-template ngFor let-item [ngForOf]="list">
   <p>
     {{item.nome}}
   </p>
@@ -16,4 +17,6 @@
 
 
 <input [(ngModel)]="nome" type="text"/>
-<button (click)="salvar()">Salvar</button>
+<button (click)="salvar()">Salvar</button> -->
+
+<ng-content select="h2"></ng-content>
