@@ -19,8 +19,8 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
     -->
     <!--<app-diretivas-estruturais>-->
     <app-diretivas-atributo>
-      <h3>Teste diretiva ng-content</h3>
-      <h2>Mensagem 2</h2>
+      <h3 default>Teste diretiva ng-content</h3>
+      <h3>Mensagem 2</h3>
     </app-diretivas-atributo>
     <router-outlet></router-outlet>
   `

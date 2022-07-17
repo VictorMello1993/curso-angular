@@ -1,4 +1,4 @@
-<ng-content select="h3"></ng-content>
+<ng-content select="[default]"></ng-content>
 <p [ngClass]="{'active': valor, 'disabled': !valor}" [ngStyle]="{'color': textColor}">NgClass</p>
 <p [ngStyle]="{'height': heightPx, 'background-color': backgroundColor, 'color': textColor}">NgStyle</p>
 
@@ -19,4 +19,4 @@
 <input [(ngModel)]="nome" type="text"/>
 <button (click)="salvar()">Salvar</button> -->
 
-<ng-content select="h2"></ng-content>
+<ng-content select="h3"></ng-content>
