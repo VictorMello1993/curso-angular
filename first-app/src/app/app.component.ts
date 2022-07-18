@@ -23,7 +23,10 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
       <h3>Mensagem 2</h3>
     </app-diretivas-atributo>-->
    <!--<app-pipes></app-pipes>-->
-    <app-new-component></app-new-component>
+   <!--<app-new-component></app-new-component>-->
+    <app-input [contador]="addValue"></app-input>
+    <br/>
+    <button (click)="add()">Adicionar</button>
     <router-outlet></router-outlet>
   `
 })
@@ -32,9 +35,14 @@ export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
 
   valor: number = 1
   destruido: boolean = true
+  addValue: number = 10
 
   adicionar(): number{
     return this.valor += 1
+  }
+
+  add(): number{
+    return this.addValue += 1
   }
 
   destruirComponente() {
