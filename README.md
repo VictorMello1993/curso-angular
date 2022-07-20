@@ -6,12 +6,14 @@
 <br/>
 
 ## Listagem de tarefas      
-![Screenshot_2](https://user-images.githubusercontent.com/35710766/179879193-860f4607-580e-4a2c-adad-6636c651b35d.png)
+
+![Screenshot_2](https://user-images.githubusercontent.com/35710766/179880066-596f1f92-d026-476c-80d2-d0c4de5039cb.png)
 
 <br/>
 
 ## Listagem de tarefas com as ações de marcar como feito e excluir
-![Screenshot_3](https://user-images.githubusercontent.com/35710766/179879544-80e04cb7-2706-4929-bcfa-954963bcca2a.png)
+![Screenshot_3](https://user-images.githubusercontent.com/35710766/179880090-9476f782-42e8-40be-af2b-f5ae7161204d.png)
+
 
 Figma: https://www.figma.com/file/ZX3XOso5AovkNOQVqoEQum/My-Todo-List?node-id=26%3A0
 
