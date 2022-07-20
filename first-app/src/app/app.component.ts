@@ -24,9 +24,15 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
     </app-diretivas-atributo>-->
    <!--<app-pipes></app-pipes>-->
    <!--<app-new-component></app-new-component>-->
-    <app-input [contador]="addValue"></app-input>
+    <!--<app-input [contador]="addValue"></app-input>
     <br/>
-    <button (click)="add()">Adicionar</button>
+    <button (click)="add()">Adicionar</button>-->
+
+    <ng-template [ngIf]="getDados">
+      <h1>{{getDados.nome}}</h1>
+      <h2>{{getDados.idade}}</h2>
+    </ng-template>
+    <app-output (enviarDados)="setDados($event)"></app-output>
     <router-outlet></router-outlet>
   `
 })
@@ -36,6 +42,8 @@ export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
   valor: number = 1
   destruido: boolean = true
   addValue: number = 10
+
+  getDados: {nome: string, idade: number} | undefined
 
   adicionar(): number{
     return this.valor += 1
@@ -66,5 +74,9 @@ export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
   }
   ngAfterViewChecked(): void {
     console.log('ngAfterViewChecked')
+  }
+
+  setDados(event: {nome: string, idade: number}){
+    this.getDados = event
   }
 }
