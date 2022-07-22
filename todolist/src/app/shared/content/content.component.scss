@@ -2,4 +2,13 @@ main{
   width: 350px;
   height: 250px;
   background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0,0,0, 0.08)
+}
+
+img{
+  width: 160px;
+  height: 166px;
 }
