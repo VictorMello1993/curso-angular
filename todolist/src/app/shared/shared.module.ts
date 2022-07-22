@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { ContentComponent } from './content/content.component';
 import { InputTextComponent } from './input-text/input-text.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -10,6 +11,7 @@ import { InputTextComponent } from './input-text/input-text.component';
     HeaderComponent,
     ContentComponent,
     InputTextComponent,
+    FooterComponent,
 
   ],
   imports: [
@@ -18,7 +20,8 @@ import { InputTextComponent } from './input-text/input-text.component';
   exports: [
     HeaderComponent,
     ContentComponent,
-    InputTextComponent
+    InputTextComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }

@@ -1,5 +1,20 @@
-footer{
+.inputText{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input{
   width: 300px;
   height: 40px;
   background-color: #AF7EEB;
+  border: none;
+  text-align: center;
+  color: #FFF;
+  outline: none;
+  margin-top: -20px;
+}
+
+input::placeholder{
+  color: #FFF;
 }
