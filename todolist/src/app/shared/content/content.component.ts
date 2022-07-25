@@ -9,6 +9,8 @@ export class ContentComponent implements OnInit {
 
   constructor() { }
 
+  tasks: Array<{id: number, description: string, status: boolean}> = []
+
   ngOnInit(): void {
   }
 

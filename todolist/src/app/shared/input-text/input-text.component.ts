@@ -12,4 +12,6 @@ export class InputTextComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addTask(){}
+
 }
