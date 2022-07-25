@@ -9,4 +9,14 @@ button{
   background-color: #FF002E;
   color: #FFF;
   padding: 11px 51px;
+  font-weight: 700;
+  margin-top: 20px;
+  border: none;
+  animation: 2s ease infinite blinker;
+  transition: background-color .5s ease, transform .5s ease, box-shadow .5s ease;
+}
+
+button:hover{
+  background-color: #fa3358;
+  animation: none;
 }
