@@ -1,5 +1,13 @@
 <main>
-  <div class="image">
-    <img src="../../../assets/task.svg" alt="Lista de tarefas">
-  </div>
+  <!-- <ng-template class="imageTemplate" [ngIf]="tasks.length === 0">
+    <div class="imageContent">
+      <img src="../../../assets/task.svg" alt="Lista de tarefas">
+    </div>
+  </ng-template> -->
+  <ng-template class="taskItemTemplate" [ngIf]="tasks.length === 0">
+    <div class="taskContent">
+      <input type="checkbox" name="task">
+      <label for="task">Item</label>
+    </div>
+  </ng-template>
 </main>
