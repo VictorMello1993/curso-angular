@@ -9,9 +9,20 @@ export class ContentComponent implements OnInit {
 
   constructor() { }
 
-  tasks: Array<{id: number, description: string, status: boolean}> = []
+  tasks: Array<{description: string, checked: boolean}> = []
 
   ngOnInit(): void {
   }
 
+  setEmitTaskItem(event: string){
+    return this.tasks.push({description: event, checked: false})
+  }
+
+  removeTask(index: number){
+    this.tasks.splice(index, 1)
+  }
+
+  removeAllTasks(){
+    this.tasks = []
+  }
 }
