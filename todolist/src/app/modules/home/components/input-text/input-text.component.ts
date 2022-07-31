@@ -7,7 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class InputTextComponent implements OnInit {
 
-  @Output() emitItemTaskList = new EventEmitter();
+  @Output() emitAddTaskItem = new EventEmitter();
 
   inputText: string = '';
 
@@ -22,7 +22,7 @@ export class InputTextComponent implements OnInit {
     this.inputText = this.inputText.trim()
 
     if(this.inputText){
-      this.emitItemTaskList.emit(this.inputText)
+      this.emitAddTaskItem.emit(this.inputText)
       this.inputText = ''
     }
   }

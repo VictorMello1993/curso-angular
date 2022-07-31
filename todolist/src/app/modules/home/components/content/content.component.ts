@@ -1,20 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
+import { TaskList } from '../../models/task-list';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss']
 })
-export class ContentComponent implements OnInit {
+
+export class ContentComponent implements DoCheck {
 
   constructor() { }
-
-  tasks: Array<{description: string, checked: boolean}> = []
-
-  ngOnInit(): void {
+  ngDoCheck(): void {
+    this.setLocalStorage()
   }
 
-  setEmitTaskItem(event: string){
+  tasks: Array<TaskList> = JSON.parse(localStorage.getItem('taskList') || '[]')
+
+  addTask(event: string){
     return this.tasks.push({description: event, checked: false})
   }
 
@@ -24,5 +26,11 @@ export class ContentComponent implements OnInit {
 
   removeAllTasks(){
     this.tasks = []
+  }
+
+  setLocalStorage(){
+    if(this.tasks){
+      localStorage.setItem('taskList', JSON.stringify(this.tasks))
+    }
   }
 }

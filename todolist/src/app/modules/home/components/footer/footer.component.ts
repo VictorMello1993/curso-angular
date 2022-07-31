@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { TaskList } from '../../models/task-list';
 
 @Component({
   selector: 'app-footer',
@@ -9,7 +10,7 @@ export class FooterComponent implements OnInit {
 
   @Output() emitRemoveAllTasks = new EventEmitter();
 
-  currentTasks: Array<{description: string, checked: boolean}> = [];
+  currentTasks: Array<TaskList> = [];
 
   constructor() { }
 

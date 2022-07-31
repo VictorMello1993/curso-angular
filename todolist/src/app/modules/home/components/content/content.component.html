@@ -2,7 +2,8 @@
   <ul *ngIf="tasks.length">
     <li *ngFor="let item of tasks; let i = index">
       <input type="checkbox" [(ngModel)]="item.checked">
-      <input type="text" disabled [(ngModel)]="item.description">
+      <input type="text" disabled [(ngModel)]="item.description"
+            [ngClass]="{'taskDone': item.checked}">
       <button>
         <img src="../../../../../assets/thrash.svg" alt="Excluir tarefa" (click)="removeTask(i)">
       </button>
@@ -10,6 +11,6 @@
   </ul>
 </main>
 
-<app-input-text (emitItemTaskList)="setEmitTaskItem($event)"></app-input-text>
+<app-input-text (emitAddTaskItem)="addTask($event)"></app-input-text>
 <app-footer *ngIf="tasks.length" (emitRemoveAllTasks)="removeAllTasks()"></app-footer>
 
