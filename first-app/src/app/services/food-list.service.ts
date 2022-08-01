@@ -17,4 +17,8 @@ export class FoodListService {
   foodList(){
     return this.list
   }
+
+  foodListAdd(value: string){
+    this.list.push(value);
+  }
 }
