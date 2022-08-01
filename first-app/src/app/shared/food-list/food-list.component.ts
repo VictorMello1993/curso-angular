@@ -14,6 +14,10 @@ export class FoodListComponent implements OnInit {
 
   ngOnInit(): void {
     this.foodList = this.foodListService.foodList()
+
+    this.foodListService.emitEvent.subscribe({
+      next: (res: any) => console.log(res)
+    })
   }
 
 }
