@@ -28,7 +28,7 @@ git checkout projeto1
 npm install
 ```
 
-3. Exevute o projeto
+3. Execute o projeto
 ```sh
 ng serve
 ```
