@@ -9,7 +9,7 @@ import { FoodListService } from '../../services/food-list.service';
 })
 export class FoodListComponent implements OnInit {
 
-  foodList: IFoodList | any;
+  foodList: Array<IFoodList> = []
 
   constructor(private foodListService: FoodListService) { }
 
@@ -20,9 +20,11 @@ export class FoodListComponent implements OnInit {
     }
     )
 
-    this.foodListService.emitEvent.subscribe({
-      next: (res: any) => console.log(res)
-    })
+    this.foodListService.emitEvent.subscribe(
+      res => {
+        alert(`Você adicionou ${res.name}`)
+        return this.foodList.push(res)
+      }
+    )
   }
-
 }
