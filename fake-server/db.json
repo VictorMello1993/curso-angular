@@ -1,8 +1,8 @@
 {
   "list-food": [
-    {"id": 1, "name": "Arroz"},
-    {"id": 2, "name": "Feijão"},
-    {"id": 3, "name": "Ovo"},
-    {"id": 4, "name": "Batata"}
+    {
+      "name": "Item 1",
+      "id": 1
+    }
   ]
 }
