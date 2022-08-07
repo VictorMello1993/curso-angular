@@ -33,8 +33,9 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
       <h2>{{getDados.idade}}</h2>
     </ng-template>
     <app-output (enviarDados)="setDados($event)"></app-output>-->
-    <app-food-list></app-food-list>
-    <app-food-add></app-food-add>
+    <!--<app-food-list></app-food-list>
+    <app-food-add></app-food-add>-->
+    <app-forms></app-forms>
     <router-outlet></router-outlet>
   `
 })

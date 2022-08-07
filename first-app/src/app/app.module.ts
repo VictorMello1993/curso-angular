@@ -9,6 +9,7 @@ import { DiretivasEstruturaisComponent } from './diretivas-estruturais/diretivas
 import { DiretivasAtributoComponent } from './diretivas-atributo/diretivas-atributo.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { SharedModule } from './shared/shared.module';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SharedModule } from './shared/shared.module';
     DataBindingComponent,
     DiretivasEstruturaisComponent,
     DiretivasAtributoComponent,
-    PipesComponent
+    PipesComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
