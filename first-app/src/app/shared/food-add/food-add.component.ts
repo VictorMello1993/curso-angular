@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Operation } from '../../module/food-list';
 import { FoodListService } from '../../services/food-list.service';
 
 @Component({
@@ -22,7 +23,13 @@ export class FoodAddComponent implements OnInit {
 
   listAddItem(value: string){
     return this.foodListService.foodListAdd(value).subscribe({
-      next: res => this.foodListService.foodListAlert(res),
+      next: res =>  {
+
+        res.operation = Operation.adition
+        res.name = value
+
+        this.foodListService.foodListAlert(res)
+      },
       error: err => err
     })
   }
