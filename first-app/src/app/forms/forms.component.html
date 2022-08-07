@@ -1,8 +1,9 @@
 <form #form="ngForm">
   <label>
     Nome:
-    <input type="text" name="nome" ngModel>
+    <input type="text" name="nome" #nome="ngModel" ngModel required>
   </label>
+  <span *ngIf="!nome.valid && (nome.dirty && nome.touched)">Valor inválido</span>
   <br/>
   <br/>
   <label>
@@ -49,11 +50,6 @@
   <br/>
   <select name="comidas" ngModel>
     <option value="">Selecione um alimento</option>
-    <!-- <option value="Batata doce">Batata doce</option>
-    <option value="Peito de frango">Peito de frango</option>
-    <option value="Arroz"> Arroz</option>
-    <option value="Feijão">Feijão</option> -->
-
     <option *ngFor="let item of foodList" [ngValue]="item">
       {{item.food}}
     </option>
@@ -66,3 +62,16 @@
 <br/>
 
 {{form.value | json}}
+<br/>
+<br/>
+
+<!-- ----Trabalhando com validações do formulário---- -->
+<!-- O formulário inteiro está válido, com todos os campos devidamente preenchidos. -->
+{{form.valid}}
+
+<!-- Houve alteração no formulário após o usuário inserir algum valor no formulário. Independente se o usuário
+     limpa um dos campos, o valor permanecerá true, a menos que o usuário atualize a página.-->
+{{form.dirty}}
+
+<!-- O valor será true quando o usuário realizar qualquer interação no formulário.-->
+{{form.touched}}
