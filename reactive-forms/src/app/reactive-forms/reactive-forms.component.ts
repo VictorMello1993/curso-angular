@@ -22,6 +22,7 @@ export class ReactiveFormsComponent implements OnInit {
 
   // Exibindo o valor inserido do campo de input do formulário
   submitForm(){
+    if(this.registerForm.valid) //Só irá submeter quando o formulário inteiro for válido
     console.log(this.registerForm.value) //Exibe os valores preenchidos de todos os campos
     console.log(this.registerForm.value.firstName)
     console.log(this.registerForm.value.lastName)

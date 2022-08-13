@@ -22,5 +22,5 @@
     {{registerForm.get('firstName')?.dirty | json}}
   </p>
 
-  <button>Enviar</button>
+  <button [disabled]="registerForm.invalid">Enviar</button>
 </form>
