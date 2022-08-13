@@ -1,0 +1,11 @@
+<form [formGroup]="registerForm" (ngSubmit)="submitForm()">
+  <input type="text" formControlName="firstName">
+  <br/>
+  <input type="text" formControlName="lastName">
+
+  <p>
+    {{registerForm.get('firstName')?.value}}
+  </p>
+
+  <button>Enviar</button>
+</form>
