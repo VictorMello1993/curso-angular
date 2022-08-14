@@ -14,12 +14,61 @@
   <label>
     Sobrenome:
     <input type="text" formControlName="lastName">
+    <span *ngIf="registerForm.get('lastName')?.errors?.['required'] && registerForm.get('lastName')?.touched"
+           class="alert">
+      Sobrenome obrigatório
+    </span>
+    <span *ngIf="registerForm.get('lastName')?.errors?.['maxlength'] &&
+                 registerForm.get('lastName')?.touched"
+           class="alert">
+      Sobrenome não pode passar de {{registerForm.get('lastName')?.errors?.['maxlength']
+                                                                 ?.['requiredLength']}} caracteres
+    </span>
+    <span *ngIf="registerForm.get('lastName')?.errors?.['minlength'] &&
+                 registerForm.get('lastName')?.touched"
+           class="alert">
+      Sobrenome deve possuir no mínimo {{registerForm.get('lastName')?.errors?.['minlength']?.['requiredLength']}} caracteres
+    </span>
+
+  </label>
+
+  <br/>
+  <br/>
+
+  <label>
+    Email:
+    <input type="email" formControlName="email">
+    <span *ngIf="registerForm.get('email')?.errors?.['required'] && registerForm.get('email')?.touched"
+           class="alert">
+      E-mail obrigatório
+    </span>
+    <span *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.errors?.['pattern']"
+           class="alert">
+      E-mail inválido
+    </span>
+  </label>
+
+  <br/>
+  <br/>
+
+  <label>
+    CPF:
+    <input formControlName="cpf" mask="000.000.000-00">
+    <span *ngIf="registerForm.get('cpf')?.errors?.['required'] && registerForm.get('cpf')?.touched"
+           class="alert">
+      CPF Obrigatório
+    </span>
+    <span *ngIf="registerForm.get('cpf')?.touched && registerForm.get('cpf')?.errors?.['pattern']"
+           class="alert">
+      CPF inválido
+    </span>
   </label>
 
   <p>
-    {{registerForm.get('firstName')?.errors | json}}
+    <!-- {{registerForm.get('firstName')?.errors | json}}
     {{registerForm.get('firstName')?.touched | json}}
-    {{registerForm.get('firstName')?.dirty | json}}
+    {{registerForm.get('firstName')?.dirty | json}} -->
+    {{registerForm.get('lastName')?.errors | json}}
   </p>
 
   <button [disabled]="registerForm.invalid">Enviar</button>
