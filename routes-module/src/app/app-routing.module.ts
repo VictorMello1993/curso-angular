@@ -6,7 +6,9 @@ import { SobreComponent } from './pages/sobre/sobre.component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent, pathMatch: "full"}, //http://localhost:4200
-  {path: "sobre/:id/:username", component: SobreComponent}, //http://localhost:4200/sobre
+  {path: "sobre", component: SobreComponent, children: [  //http://localhost:4200/sobre
+    {path: ':id/:username', component: SobreComponent} //Rotas filhas de http://localhost:4200/sobre
+  ]},
   {path: "404", component: PageErrorComponent}, //http://localhost:4200/404
   {path: "**", redirectTo: '404'}, //Rota coringa (rota inválida)
                                    // Se o usuário preencher a rota erroneamente, redirecionar para a rota http://localhost:4200/404

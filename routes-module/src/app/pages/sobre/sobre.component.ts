@@ -22,10 +22,10 @@ export class SobreComponent implements OnInit {
       res => console.log(res) //Acessando os parâmetros da rota em uma querystring
     )
 
-    setInterval(() => {
-      this.router.navigate(['404']); //Aqui não realiza refresh. É comum para fazer navegações internas de uma url
-      // this.router.navigateByUrl('404'); //Aqui realiza refresh na página que foi navegada
-    }, 5000)
+    // setInterval(() => {
+    //   this.router.navigate(['404']); //Aqui não realiza refresh. É comum para fazer navegações internas de uma url
+    //   // this.router.navigateByUrl('404'); //Aqui realiza refresh na página que foi navegada
+    // }, 5000)
   }
 
 }
