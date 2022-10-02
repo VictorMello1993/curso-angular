@@ -13,7 +13,6 @@ import { MenuComponent } from './shared/menu/menu.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     SobreComponent,
     PageErrorComponent,
     MenuComponent
