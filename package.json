@@ -6,7 +6,7 @@
     "start": "node server.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy:ghdocs": "ng build --output-path docs --base-href /CursoAngular/",
+    "deploy:ghdocs": "ng build --output-path docs --base-href /curso-angular/",
     "engines": {
       "node": "16.x",
       "npm": "8.x"
