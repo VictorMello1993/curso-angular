@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TaskList } from '../../models/task-list';
 
 @Component({
@@ -8,18 +8,14 @@ import { TaskList } from '../../models/task-list';
 })
 export class FooterComponent implements OnInit {
 
-  @Output() emitRemoveAllTasks = new EventEmitter();
-
-  currentTasks: Array<TaskList> = [];
+  currentTasks: Array<TaskList> = JSON.parse(localStorage.getItem('taskList') || '[]')
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  removeAllTasksEvent(){
-    if(this.currentTasks){
-      this.emitRemoveAllTasks.emit(this.currentTasks)
-    }
+  removeAllTasks() {
+    this.currentTasks = []
   }
 }

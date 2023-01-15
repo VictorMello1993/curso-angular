@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskList } from './models/task-list';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { }
+
+  taskList: Array<TaskList> = JSON.parse(localStorage.getItem('taskList') || '[]')
 
   ngOnInit(): void {
   }

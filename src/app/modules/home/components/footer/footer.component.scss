@@ -14,9 +14,10 @@ button{
   border: none;
   animation: 2s ease infinite blinker;
   transition: background-color .5s ease, transform .5s ease, box-shadow .5s ease;
+  cursor: pointer;
 }
 
 button:hover{
-  background-color: #fa3358;
+  background-color: #dc3654;
   animation: none;
 }

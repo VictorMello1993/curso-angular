@@ -1,4 +1,5 @@
 <div class="container">
   <app-header></app-header>
-  <app-content></app-content>
+  <app-content [tasks]="footer.currentTasks"></app-content>
+  <app-footer #footer></app-footer>
 </div>
