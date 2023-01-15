@@ -1,3 +1,3 @@
 <footer>
-  <button (click)="removeAllTasks()">Deletar todos</button>
+  <button (click)="removeAllTasks()" *ngIf="currentTasks.length">Deletar todos</button>
 </footer>
