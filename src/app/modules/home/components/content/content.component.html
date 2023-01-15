@@ -4,7 +4,7 @@
       <input type="checkbox" [(ngModel)]="item.checked">
       <input type="text" disabled [(ngModel)]="item.description" [ngClass]="{'taskDone': item.checked}">
       <button>
-        <img src="./assets/thrash.svg" alt="Excluir tarefa" (click)="removeTask(i)">
+        <img src="/assets/thrash.svg" alt="Excluir tarefa" (click)="removeTask(i)">
       </button>
     </li>
   </ul>
