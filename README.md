@@ -35,5 +35,5 @@ ng serve
 
 Layout figma: https://www.figma.com/file/IgTsY5wuykV3WtJ9RacZ8Y/My-Todo-List-(Copy)
 
-Link GitHub Pages: https://victormello1993.github.io/curso-angular/
+
  
